@@ -13,7 +13,7 @@
 <body>
     <div id="maindiv">
         <h1 id="logo">facebook</h1>
-        <form>
+        <form id="signupfo">
             <div id="signup-form">
                 <div id="form-heading">
                     <h2>Create a new account</h2>
@@ -21,35 +21,38 @@
                 </div>
                 <div id="form-body">
                     <div class="half-width">
-                        <input type="text" placeholder="First name" />
+                        <input type="text" placeholder="First name" name="fname" />
                     </div>
                     <div class="half-width">
-                        <input type="text" placeholder="Last name" />
+                        <input type="text" placeholder="Last name" name="lname" />
                     </div>
                     <label for="dob" class="side-heading">Date of birth</label>
                     <div class="columns-3">
                         <div class="quartwidth">
-                            <select id="dob">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                            <select id="dob" name="date">
+                                <option value="">choose</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select>
                         </div>
                         <div class="quartwidth">
-                            <select id="dob">
-                                <option>jan</option>
-                                <option>feb</option>
-                                <option>mar</option>
-                                <option>apr</option>
+                            <select id="dob" name="month">
+                                <option value="">choose</option>
+                                <option value="jan">jan</option>
+                                <option value="feb">feb</option>
+                                <option value="mar">mar</option>
+                                <option value="apr">apr</option>
                             </select>
                         </div>
                         <div class="quartwidth">
-                            <select id="dob">
-                                <option>2001</option>
-                                <option>2002</option>
-                                <option>2003</option>
-                                <option>2004</option>
+                            <select id="dob" name="year">
+                                <option value="">choose</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
                             </select>
                         </div>
                     </div>
@@ -75,10 +78,10 @@
                         </div>
                     </div>
                     <div class="fullwidth">
-                        <input type="text" placeholder="Mobile number or Email address" class="input1" />
+                        <input type="number" placeholder="Mobile number or Email address" name="phoneno" />
                     </div>
                     <div class="fullwidth">
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" name="pass"/>
                     </div>
                     <p class="last-ptag">People who use our service may have uploaded your contact information to
                         Facebook.
@@ -107,5 +110,7 @@
         </form>
     </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+<script src="./validation.js"></script>
 </html>
